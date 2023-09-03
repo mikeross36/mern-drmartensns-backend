@@ -40,7 +40,7 @@ exports.createOrder = asyncHandler(async function (req, res) {
     },
     transactionId: charge.source.id,
   });
-  return res.status(200).json({ status: "success", newOrder });
+  return res.status(200).json({ status: "success", newOrder: newOrder });
 });
 
 exports.getUserOrders = asyncHandler(async function (req, res) {
